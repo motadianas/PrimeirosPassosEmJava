@@ -7,7 +7,11 @@ public class Quadrado {
         return this.lado;
     }
     public void setLado(int lado){
-        this.lado = lado;
+        if(lado>0){
+            this.lado = lado;
+        }else{
+            System.out.println("Valor inválido");
+        }
     }
     public int calcularArea(){
         return this.lado*this.lado;

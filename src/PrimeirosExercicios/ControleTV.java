@@ -8,15 +8,17 @@ public class ControleTV {
     public int getCanal(){
         return this.canal;
     }
-    
     public int getVolume(){
         return this.volume;
     }
-    
     public void setCanal(int canal){
-        this.canal = canal;
+        if(canal>0){
+            this.canal = canal;
+        }
+        else{
+            System.out.println("Valor inválido");
+        }
     }
-    
     public void aumentarVolume(){
         if(this.volume<100){
             this.volume++;
@@ -27,6 +29,4 @@ public class ControleTV {
             this.volume--;
         }
     }
-    
-    
 }

@@ -4,7 +4,7 @@ public class Retangulo {
     private int base;
     private int altura;
     
-    //m�todos
+    //metodos
     public int getBase(){
     return this.base;
     }
@@ -14,11 +14,19 @@ public class Retangulo {
     }
     
     public void setBase(int base){
-        this.base = base;
+        if(base>0){
+            this.base = base;
+        }else{
+            System.out.println("Valor inválido");
+        }
     }
     
     public void setAltura(int altura){
-        this.altura = altura;
+        if(altura>0){
+            this.altura = altura;
+        }else{
+            System.out.println("Valor inválido");
+        }
     }
     
     public int calcularArea(){
