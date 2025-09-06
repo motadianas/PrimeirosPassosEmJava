@@ -1,4 +1,4 @@
-package exercicio;
+package PrimeirosExercicios;
 public class Funcionario {
     private String nome;
     private double salario;
@@ -7,7 +7,7 @@ public class Funcionario {
         this.nome = nome;
         this.salario = salario;
     }
-    //Métodos
+    //Mï¿½todos
     public String getNome(){
         return this.nome;
     }

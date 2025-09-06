@@ -1,4 +1,4 @@
-package exercicio;
+package PrimeirosExercicios;
 
 public class ControleTV {
     private int canal;

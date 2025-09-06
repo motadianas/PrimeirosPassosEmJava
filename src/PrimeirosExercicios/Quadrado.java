@@ -1,4 +1,4 @@
-package exercicio;
+package PrimeirosExercicios;
 
 public class Quadrado {
     private int lado;

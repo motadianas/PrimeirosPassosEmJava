@@ -1,7 +1,7 @@
-package exercicio;
+package PrimeirosExercicios;
 
 
-public class Exercicio {
+public class Main {
 
     public static void main(String[] args) {
         //Teste de bola

@@ -1,10 +1,10 @@
-package exercicio;
+package PrimeirosExercicios;
 
 public class Retangulo {
     private int base;
     private int altura;
     
-    //métodos
+    //mï¿½todos
     public int getBase(){
     return this.base;
     }
