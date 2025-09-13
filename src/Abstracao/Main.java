@@ -27,10 +27,29 @@ public class Main {
 
         System.out.println("--- Lista de Veiculos ---");
         for (Veiculo v : veiculos) {
-            v.acelerar(); // cada tipo reage de forma diferente
-            v.frear();    // cada tipo reage de forma diferente
+            v.acelerar();
+            v.frear();
             System.out.println();
         }
         ((Carro)veiculos.get(0)).abastecer();
+
+        System.out.println("**************Teste de Contas Bancárias**************");
+        List<ContaBancaria> contas = new ArrayList<>();
+        contas.add(new ContaCorrente(1000));
+        contas.add(new ContaPoupanca(1000));
+        for (ContaBancaria c: contas){
+            c.consultarSaldo();
+            c.depositar(0); //Testando valor 0
+            c.depositar(-10); //Testando valor negativo
+            c.depositar(100);
+            c.consultarSaldo();
+            c.sacar(0); //Testando valor 0
+            c.sacar(-10); //Testando valor negativo
+            c.sacar(2000); //Testando valo maior que o saldo
+            c.sacar(10);
+            c.consultarSaldo();
+            System.out.println();
+        }
+
     }
 }
