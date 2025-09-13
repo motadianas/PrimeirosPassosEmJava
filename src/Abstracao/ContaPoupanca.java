@@ -1,13 +1,13 @@
 package Abstracao;
 
 public class ContaPoupanca extends ContaBancaria{
-    public ContaPoupanca(float saldoInicial){
+    protected ContaPoupanca(float saldoInicial){
         super(saldoInicial);
     }
     @Override
     void sacar(float retirada) {
         if(retirada>0){
-            if(saldo>0&&saldo>=retirada){
+            if(saldo>=retirada){
                 saldo-=retirada;
                 System.out.println("Valor retirado da Conta Poupança: R$"+retirada);
             }

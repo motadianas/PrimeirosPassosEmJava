@@ -3,7 +3,7 @@ package Abstracao;
 abstract class ContaBancaria {
     protected float saldo;
 
-    public ContaBancaria(float saldoInicial){
+    protected ContaBancaria(float saldoInicial){ //BigDecimal garante precisao exata para valores monetarios.
         this.saldo =saldoInicial;
     }
     abstract void sacar(float retirada);

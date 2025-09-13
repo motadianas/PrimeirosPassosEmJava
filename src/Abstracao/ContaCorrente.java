@@ -1,14 +1,14 @@
 package Abstracao;
 
 public class ContaCorrente extends ContaBancaria{
-    public ContaCorrente(float saldoInicial) {
+    protected ContaCorrente(float saldoInicial) {
         super(saldoInicial);
     }
 
     @Override
     void sacar(float retirada) {
         if(retirada>0){
-            if(saldo>0&&saldo>=retirada){
+            if(saldo>=retirada){
                 saldo-=retirada;
                 System.out.println("Valor retirado da Conta Corrente: R$"+retirada);
             }
