@@ -8,8 +8,7 @@ public class Moto extends Veiculo {
     public void acelerar(){
         if(velocidade<80){
             this.velocidade++;
-            System.out.println("A moto acelerou....");
-            System.out.println(this.velocidade);
+            System.out.println("A moto acelerou. | Velocidade = "+this.velocidade);
         }else {
             System.out.println("A velocidade máxima do veículo é controlada. Ele só chega até 80km/h");
         }
@@ -18,8 +17,7 @@ public class Moto extends Veiculo {
     public void frear(){
         if(velocidade>0){
             this.velocidade--;
-            System.out.println("A moto freou.");
-            System.out.println(this.velocidade);
+            System.out.println("A moto freou. | Velocidade = "+this.velocidade);
         }
         else {
             System.out.println("A velocidade já está muito baixa. Não dá para diminuir.");
