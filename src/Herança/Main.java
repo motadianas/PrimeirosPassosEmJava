@@ -78,6 +78,11 @@ public class Main {
             System.out.println();
         }
 
+        System.out.println("************** Teste de Produto **************");
+        Eletronico e = new Eletronico("Caixa de som",200,"Eletronico",12, 110);
+        e.exibirInfo();
+        System.out.println();
+
     }
     
 }
