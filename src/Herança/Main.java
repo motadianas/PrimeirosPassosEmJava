@@ -27,6 +27,21 @@ public class Main {
         ((Moto) v).exibirInfoCompleta(); //Teste do metodo Info completa
         System.out.println();
 
+        System.out.println("************** Teste de Pessoa **************");
+        Pessoa p = new Pessoa("Maria", 20);
+        System.out.println("Nome: "+p.getNome());
+        p.setNome("Diana");
+        System.out.println("Idade: "+p.getIdade());
+        System.out.println("Nome: "+p.getNome());
+        p.setIdade(0);
+        System.out.println("Idade: "+p.getIdade());
+        p.setIdade(150);
+        System.out.println("Idade: "+p.getIdade());
+        p.setIdade(30);
+        System.out.println("Idade: "+p.getIdade());
+
+
+
     }
     
 }
