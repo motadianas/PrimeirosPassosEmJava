@@ -37,6 +37,7 @@ public class Main {
         List<ContaBancaria> contas = new ArrayList<>();
         contas.add(new ContaCorrente(1000));
         contas.add(new ContaPoupanca(1000));
+        System.out.println("--- Lista de Contas ---");
         for (ContaBancaria c: contas){
             c.consultarSaldo();
             c.depositar(0); //Testando valor 0
@@ -51,5 +52,34 @@ public class Main {
             System.out.println();
         }
 
+        System.out.println("**************Teste de Funcionarios**************");
+        List<Funcionario> funcionarios = new ArrayList<>();
+        funcionarios.add(new Gerente("Diana",10000));
+        funcionarios.add(new Vendedor("Maria", 1000));
+        System.out.println("--- Lista de Funcionarios ---");
+        for (Funcionario f : funcionarios){
+            f.calcularSalario(200);
+        }
+
+        System.out.println("**************Teste de Notificacao**************");
+        List<Notificacao> bip = new ArrayList<>();
+        bip.add(new Email());
+        bip.add(new SMS());
+        bip.add(new PushNotification());
+        String teste = "Parabésn! Você foi aprovada na nossa seleção de estágio.";
+        System.out.println("--- Lista de Notificacao ---");
+        for (Notificacao n : bip){
+            n.enviar(teste);
+            System.out.println();
+        }
+        System.out.println("**************Teste de Produtos**************");
+        List<Produto> produtos = new ArrayList<>();
+        produtos.add(new Livro("Percy Jackson",50));
+        produtos.add(new Eletronico("Fone de Ouvido", 200));
+        produtos.add(new Roupas("Casaco Bege", 123.20));
+        System.out.println("--- Lista de Notificacao ---");
+        for (Produto p : produtos){
+            p.aplicarDesconto();
+        }
     }
 }

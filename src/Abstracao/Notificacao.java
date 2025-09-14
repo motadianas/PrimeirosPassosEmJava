@@ -1,5 +1,5 @@
 package Abstracao;
 
-public interface Notaficacao {
+public interface Notificacao {
     void enviar(String msg);
 }
