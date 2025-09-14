@@ -40,6 +40,20 @@ public class Main {
         p.setIdade(30);
         System.out.println("Idade: "+p.getIdade());
 
+        System.out.println("************** Teste de Funcionario **************");
+        List<Funcionario> funcionarios = new ArrayList<>();
+        funcionarios.add(new Funcionario("Tom", 1000));
+        funcionarios.add(new Gerente("Nikki Heat", 10000, "Departamento de homicidios"));
+        System.out.println("--- Lista de Funcionarios ---");
+        for (Funcionario f:funcionarios){
+            System.out.println("Nome: "+f.getNome());
+            System.out.println("Salario: R$"+f.getSalario());
+            if(f instanceof Gerente){
+                Gerente g = (Gerente) f;
+                System.out.println("Departamento: "+g.getDepartamento());
+            }
+            System.out.println();
+        }
 
 
     }
