@@ -55,7 +55,9 @@ public class Main {
             System.out.println();
         }
 
-
+        System.out.println("************** Teste de Animal/Mamifero/Cachorro **************");
+        Cachorro2 c = new Cachorro2("Dog", "Au au", "Pelo curto branco", "Chihuahua");
+        c.exibirDetalhes();
     }
     
 }
