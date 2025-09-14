@@ -17,21 +17,26 @@ public class Main {
             a.dormir();
             System.out.println();
         }
-        System.out.println();
 
         System.out.println("**************Teste de veiculos**************");
         List<Veiculo> veiculos = new ArrayList<>();
         veiculos.add(new Carro(10));
         veiculos.add(new Bicicleta(2));
         veiculos.add(new Moto(5));
-
         System.out.println("--- Lista de Veiculos ---");
         for (Veiculo v : veiculos) {
             v.acelerar();
             v.frear();
+            if(v instanceof Motorizado){ //Serve para verificar se o objeto implementou aquela interface.
+                // Caso tenha, volta positivo e executa a parte interna.
+                Motorizado m = (Motorizado) v; // Cast -> transforma a referência do objeto de veiculo para motorizado
+                m.abastecer(); // Permitindo que o metodo abastecer seja chamado
+            }
             System.out.println();
         }
-        ((Carro)veiculos.get(0)).abastecer();
+        //((Carro)veiculos.get(0)).abastecer();
+            // Cast -> serve para dizer ao compilador que aquele veículo é um carro.
+            // O get, serve para pegar apenas o elemento de indice (0) da lista.
 
         System.out.println("**************Teste de Contas Bancárias**************");
         List<ContaBancaria> contas = new ArrayList<>();
@@ -72,6 +77,7 @@ public class Main {
             n.enviar(teste);
             System.out.println();
         }
+
         System.out.println("**************Teste de Produtos**************");
         List<Produto> produtos = new ArrayList<>();
         produtos.add(new Livro("Percy Jackson",50));
@@ -80,6 +86,22 @@ public class Main {
         System.out.println("--- Lista de Notificacao ---");
         for (Produto p : produtos){
             p.aplicarDesconto();
+        }
+
+        System.out.println("**************Teste de Transporte público avançado**************");
+        List<Transporte> transportes = new ArrayList<>();
+        transportes.add(new Onibus());
+        transportes.add(new Metro());
+        transportes.add(new BicicletaCompartilhada());
+        System.out.println("--- Lista de Transportes ---");
+        for(Transporte t : transportes){
+            t.calcularTarifa();
+            if(t instanceof MeioAmbiental){ //Serve para verificar se o objeto instancia MeioAmbiental
+                MeioAmbiental m = (MeioAmbiental) t; //Cast seguro: transforma a referência t (que é um Transporte)
+                // em uma referência de tipo MeioAmbiental.
+                m.emissaoCO2(); //m do tipo MeioAmbiental, o compilador permite chamar m.emissaoCO2().
+            }
+            System.out.println();
         }
     }
 }
