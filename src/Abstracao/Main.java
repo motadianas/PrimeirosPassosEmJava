@@ -6,12 +6,12 @@ import java.util.List;
 public class Main {
     public static void main(String[] args){
         System.out.println("************** Teste de animais **************");
-        List<Animal> animals = new ArrayList<>();
-        animals.add(new Cachorro());
-        animals.add(new Gato());
+        List<Animal> animais = new ArrayList<>();
+        animais.add(new Cachorro());
+        animais.add(new Gato());
         //animals.add(new Animal()); Nao funciona, pois classe abstrata nao pode ser instanciada.
         System.out.println("--- Lista de Animais ---");
-        for (Animal a : animals) {
+        for (Animal a : animais) {
             a.emitirSom();
             a.comer();
             a.dormir();
@@ -19,13 +19,31 @@ public class Main {
         }
 
         System.out.println("************** Teste de veiculos **************");
-        List<Veiculo> veiculos = new ArrayList<>();
-        veiculos.add(new Carro(10));
-        veiculos.add(new Bicicleta(2));
-        veiculos.add(new Moto(5));
+        //Teste de velocidade menor que 0 nos veículos
+        List<Veiculo> veiculos0 = new ArrayList<>();
+        veiculos0.add(new Carro(0));
+        veiculos0.add(new Bicicleta(0));
+        veiculos0.add(new Moto(0));
+        // Teste de velocidade maior que 80 nos veículos
+        List<Veiculo> veiculos80 = new ArrayList<>();
+        veiculos80.add(new Carro(80));
+        veiculos80.add(new Bicicleta(80));
+        veiculos80.add(new Moto(80));
         System.out.println("--- Lista de Veiculos ---");
-        for (Veiculo v : veiculos) {
+        System.out.println("--- Teste para veiculos iniciando em 0 --- ");
+        for (Veiculo v : veiculos0) {
+            v.frear();
             v.acelerar();
+            if(v instanceof Motorizado){ //Serve para verificar se o objeto implementou aquela interface.
+                // Caso tenha, volta positivo e executa a parte interna.
+                Motorizado m = (Motorizado) v; // Cast -> transforma a referência do objeto de veiculo para motorizado
+                m.abastecer(); // Permitindo que o metodo abastecer seja chamado
+            }
+            System.out.println();
+        }
+        System.out.println("--- Teste para veículos iniciando em 80 --- ");
+        for (Veiculo v : veiculos80) {
+           v.acelerar();
             v.frear();
             if(v instanceof Motorizado){ //Serve para verificar se o objeto implementou aquela interface.
                 // Caso tenha, volta positivo e executa a parte interna.
@@ -57,12 +75,14 @@ public class Main {
             System.out.println();
         }
 
-        System.out.println("**************Teste de Funcionarios**************");
+        System.out.println("************** Teste de Funcionarios **************");
         List<Funcionario> funcionarios = new ArrayList<>();
         funcionarios.add(new Gerente("Diana",10000));
         funcionarios.add(new Vendedor("Maria", 1000));
         System.out.println("--- Lista de Funcionarios ---");
         for (Funcionario f : funcionarios){
+            f.calcularSalario(-10); //Testando valor negativo
+            f.calcularSalario(0); //Testando valor 0
             f.calcularSalario(200);
         }
 
