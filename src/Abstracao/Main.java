@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args){
-        System.out.println("**************Teste de animais**************");
+        System.out.println("************** Teste de animais **************");
         List<Animal> animals = new ArrayList<>();
         animals.add(new Cachorro());
         animals.add(new Gato());
@@ -18,7 +18,7 @@ public class Main {
             System.out.println();
         }
 
-        System.out.println("**************Teste de veiculos**************");
+        System.out.println("************** Teste de veiculos **************");
         List<Veiculo> veiculos = new ArrayList<>();
         veiculos.add(new Carro(10));
         veiculos.add(new Bicicleta(2));
@@ -66,7 +66,7 @@ public class Main {
             f.calcularSalario(200);
         }
 
-        System.out.println("**************Teste de Notificacao**************");
+        System.out.println("************** Teste de Notificacao **************");
         List<Notificacao> bip = new ArrayList<>();
         bip.add(new Email());
         bip.add(new SMS());
@@ -78,7 +78,7 @@ public class Main {
             System.out.println();
         }
 
-        System.out.println("**************Teste de Produtos**************");
+        System.out.println("************** Teste de Produtos **************");
         List<Produto> produtos = new ArrayList<>();
         produtos.add(new Livro("Percy Jackson",50));
         produtos.add(new Eletronico("Fone de Ouvido", 200));
@@ -88,7 +88,7 @@ public class Main {
             p.aplicarDesconto();
         }
 
-        System.out.println("**************Teste de Transporte público avançado**************");
+        System.out.println("************** Teste de Transporte público avançado **************");
         List<Transporte> transportes = new ArrayList<>();
         transportes.add(new Onibus());
         transportes.add(new Metro());
@@ -100,6 +100,21 @@ public class Main {
                 MeioAmbiental m = (MeioAmbiental) t; //Cast seguro: transforma a referência t (que é um Transporte)
                 // em uma referência de tipo MeioAmbiental.
                 m.emissaoCO2(); //m do tipo MeioAmbiental, o compilador permite chamar m.emissaoCO2().
+            }
+            System.out.println();
+        }
+
+        System.out.println("************** Teste de Jogo de RPG completo **************");
+        List<Personagem> personagens = new ArrayList<>();
+        personagens.add(new Mago());
+        personagens.add(new Arqueiro());
+        personagens.add(new Guerreiro());
+        System.out.println("--- Lista de Personagens ---");
+        for (Personagem p : personagens){
+            p.atacar();
+            if(p instanceof Especial){
+                Especial e = (Especial) p;
+                e.usarHabilidade();
             }
             System.out.println();
         }
