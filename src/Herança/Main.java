@@ -58,6 +58,26 @@ public class Main {
         System.out.println("************** Teste de Animal/Mamifero/Cachorro **************");
         Cachorro2 c = new Cachorro2("Dog", "Au au", "Pelo curto branco", "Chihuahua");
         c.exibirDetalhes();
+        System.out.println();
+
+        System.out.println("************** Teste de Conta Bancaria **************");
+        List<ContaBancaria> contas = new ArrayList<>();
+        contas.add(new ContaBancaria(01, "Nikki"));
+        contas.add(new ContaPoupanca(02, "Castle"));
+        System.out.println("--- Lista de Contas ---");
+        for (ContaBancaria conta :contas){
+            conta.exibirInfo();
+            conta.sacar(-1);         //Teste negativo
+            conta.sacar(0);          //Teste zero
+            conta.sacar(1);          //Teste maior q saldo
+            conta.depositar(-1);     //Teste negativo
+            conta.depositar(0);      //Teste zero
+            conta.depositar(1000);   //Teste deposito correto
+            conta.sacar(10);         //Teste deposito correto
+            conta.exibirInfo();
+            System.out.println();
+        }
+
     }
     
 }
