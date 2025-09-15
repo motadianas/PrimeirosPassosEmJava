@@ -1,4 +1,33 @@
-# Ignorar arquivos compilados
+# Compilados do Java
+*.class
+
+# Logs
+*.log
+
+# Pacotes
+*.jar
+*.war
+*.ear
+
+# Diretórios de build comuns
 /out/
 /bin/
-*.class
+/build/
+/target/
+
+# Arquivos de configuração de IDEs
+# IntelliJ IDEA
+*.iml
+.idea/
+
+# Eclipse
+*.classpath
+*.project
+.settings/
+
+# VS Code
+.vscode/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
