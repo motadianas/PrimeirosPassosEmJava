@@ -36,7 +36,12 @@ public class Pessoa {
         }
     }
     public void crescer(double altura){
-        this.altura+=altura;
+        if(altura>0){
+            this.altura+=altura;
+        }
+        else{
+            System.out.println("Valor inválido");
+        }
     }
     public void info(){
         System.out.println("Nome:"+this.nome);
