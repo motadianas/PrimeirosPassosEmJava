@@ -25,7 +25,7 @@ public class ContaCorrente {
         if (valor>0&&valor<=saldo){
             this.saldo-=valor;
         } else if (valor>0&&valor>saldo) {
-            System.out.println("Saldo insuficiente");
+            System.out.println("saldo insuficiente");
         } else {
             System.out.println("Valor inválido");
         }
@@ -46,7 +46,7 @@ public class ContaCorrente {
     public void info(){
         System.out.println("Nome do Titular: "+getNomeDoTitular());
         System.out.println("Numero da conta: "+getNumeroDaConta());
-        System.out.println("Saldo da Conta: "+getSaldo());
+        System.out.println("saldo da Conta: "+getSaldo());
 
     }
 
