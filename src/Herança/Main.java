@@ -83,6 +83,24 @@ public class Main {
         e.exibirInfo();
         System.out.println();
 
+        System.out.println("************** Teste de Veículo2 **************");
+        Carro car = new Carro();
+        car.setPlaca("1");           //Teste placa menos digitos
+        car.setPlaca("12345678");    //Teste placa digitos a mais
+        car.setPlaca("1234567");
+        car.setAno(1899);            //Teste Ano menor
+        car.setAno(2026);            //Teste Ano maior
+        car.setAno(2025);
+        car.setPreco(-10);           //Teste Preco negativo
+        car.setPreco(0);             //Teste Preco zero
+        car.setPreco(1000);
+        car.setNumeroPortas(1);      //Teste Portas menor
+        car.setNumeroPortas(6);      //Teste Portas maior
+        car.setNumeroPortas(3);
+        car.exibirInfo();
+
+
+        
     }
-    
+
 }
