@@ -99,8 +99,29 @@ public class Main {
         car.setNumeroPortas(3);
         car.exibirInfo();
 
+        System.out.println("************** Teste de Sistema de Funcionários **************");
+        List<Funcionario2> funcionarios2 = new ArrayList<>();
+        funcionarios2.add(new Funcionario2("Kevin",12345, 1000));
+        funcionarios2.add(new FuncionarioComissionado("Orcar", 123,1000,3,10));
+        funcionarios2.add(new FuncionarioHorista("Lucia",345, 1000, 100, 20));
+        for (Funcionario2 f: funcionarios2){
+            System.out.println("Nome: "+f.getNome());
+        System.out.println("CPF: "+f.getCpf());
+            System.out.println("Salario base: R$"+f.getSalarioBase());
+            if (f instanceof FuncionarioComissionado){
+                FuncionarioComissionado comissionado = (FuncionarioComissionado) f;
+                System.out.println("Vendas: "+comissionado.getVendas());
+                System.out.println("Comissa: "+comissionado.getPercentualComissao());
+            }
+            if (f instanceof FuncionarioHorista){
+                FuncionarioHorista horista = (FuncionarioHorista) f;
+                System.out.println("Valor da Hora: R$"+horista.getValorHora());
+                System.out.println("Horas trabalhadas: "+horista.getHorasTrabalhadas());
+            }
+            System.out.println();
+        }
 
-        
+
     }
 
 }
