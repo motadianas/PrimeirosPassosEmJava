@@ -7,7 +7,7 @@ public class Arqueiro extends Personagem implements Especial{
     }
 
     @Override
-    void atacar() {
+    public void atacar() {
         System.out.println("O arqueiro atacou com uma flecha veloz e certeira.");
     }
 }

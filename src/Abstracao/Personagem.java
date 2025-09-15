@@ -1,5 +1,5 @@
 package Abstracao;
 
 abstract class Personagem {
-    abstract void atacar();
+    public abstract void atacar();
 }

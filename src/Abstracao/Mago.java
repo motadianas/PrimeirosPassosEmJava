@@ -7,7 +7,7 @@ public class Mago extends Personagem implements Especial{
     }
 
     @Override
-    void atacar() {
+    public void atacar() {
         System.out.println("O mago atacou com o seu cajado.");
     }
 }

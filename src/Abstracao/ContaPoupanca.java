@@ -5,7 +5,7 @@ public class ContaPoupanca extends ContaBancaria{
         super(saldoInicial);
     }
     @Override
-    void sacar(float retirada) {
+    public void sacar(float retirada) {
         if(retirada>0){
             if(saldo>=retirada){
                 saldo-=retirada;
@@ -21,7 +21,7 @@ public class ContaPoupanca extends ContaBancaria{
     }
 
     @Override
-    void depositar(float deposito) {
+    public void depositar(float deposito) {
         if(deposito>0){
             saldo+=(deposito*1.1);
             System.out.println("Valor depositado na Conta Poupança: R$" + deposito);

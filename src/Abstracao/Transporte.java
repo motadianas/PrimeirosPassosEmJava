@@ -1,5 +1,5 @@
 package Abstracao;
 
 abstract class Transporte {
-    abstract public void calcularTarifa();
+    public abstract void calcularTarifa();
 }
