@@ -1,15 +1,38 @@
 package Abstracao;
 
 abstract class ContaBancaria {
-    protected float saldo;
+    private String titular;
+    private double saldo;
 
-    protected ContaBancaria(float saldoInicial){ //BigDecimal garante precisao exata para valores monetarios.
-        this.saldo =saldoInicial;
+    public ContaBancaria(String titular, double saldo) {
+        this.titular = titular;
+        this.saldo = saldo;
     }
-    public abstract void sacar(float retirada);
-    public abstract void depositar(float deposito);
-    protected void consultarSaldo(){
-        System.out.println("Saldo atual: R$"+this.saldo);
+    
+    public abstract void sacar(double valor); //Obriga a classe filha a implementar
+    public abstract void depositar(double valor);
+    public void exibirSaldo(){
+        System.out.println(this.titular+ "- Saldo: R$"+String.format("%.2f", this.saldo));
     }
+    
+      
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    
+    
 
 }
